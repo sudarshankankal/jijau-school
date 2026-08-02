@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logo.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="Jijau English Medium School Logo"
                 className="w-10 h-10 rounded-xl object-cover"
               />

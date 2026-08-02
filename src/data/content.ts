@@ -86,7 +86,7 @@ export const directorData: DirectorInfo = {
   name: 'Kailas Sambhaji Kapate',
   role: 'Director, Jijau English Medium School',
   education: 'M.A., B.Ed.',
-  image: '/director.png',
+  image: `${import.meta.env.BASE_URL}director.png`,
   message:
     'Welcome to Jijau English Medium School! Our mission is to nurture young minds through value-based education, modern learning techniques, and a compassionate environment. We strive to instill confidence, discipline, and excellence in every student.',
 };
@@ -257,37 +257,37 @@ export const facilitiesData: Facility[] = [
 // [EDIT ME] Replace these placeholder descriptions & sources with real campus photos
 export const galleryImages: GalleryImage[] = [
   {
-    src: '/gallery/campus-1.jpg',
+    src: `${import.meta.env.BASE_URL}gallery/campus-1.jpg`,
     alt: 'Outdoor school celebration and student felicitation',
     category: 'School Event',
     span: 'wide',
   },
   {
-    src: '/gallery/campus-2.jpg',
+    src: `${import.meta.env.BASE_URL}gallery/campus-2.jpg`,
     alt: 'Children happily playing on the campus playground slides',
     category: 'Playground',
     span: 'tall',
   },
   {
-    src: '/gallery/campus-3.jpg',
+    src: `${import.meta.env.BASE_URL}gallery/campus-3.jpg`,
     alt: 'Students sitting together for traditional school meals and prayer',
     category: 'School Meal',
     span: 'wide',
   },
   {
-    src: '/gallery/campus-4.jpg',
+    src: `${import.meta.env.BASE_URL}gallery/campus-4.jpg`,
     alt: 'Morning prayers and cultural traditions at campus',
     category: 'Cultural Values',
     span: 'normal',
   },
   {
-    src: '/gallery/campus-5.jpg',
+    src: `${import.meta.env.BASE_URL}gallery/campus-5.jpg`,
     alt: 'Students gathered in traditional attire for cultural celebration',
     category: 'Cultural Day',
     span: 'normal',
   },
   {
-    src: '/gallery/campus-6.jpg',
+    src: `${import.meta.env.BASE_URL}gallery/campus-6.jpg`,
     alt: 'Flag hoisting ceremony celebrating national pride at school campus',
     category: 'Patriotic Event',
     span: 'wide',

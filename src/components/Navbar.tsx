@@ -40,7 +40,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
             <img
-              src="/logo.png"
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Jijau English Medium School Logo"
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-cover shadow-md group-hover:shadow-lg transition-shadow"
             />
@@ -132,7 +132,7 @@ export default function Navbar() {
                 <div className="flex justify-between items-center mb-8">
                   <div className="flex items-center gap-2">
                     <img
-                      src="/logo.png"
+                      src={`${import.meta.env.BASE_URL}logo.png`}
                       alt="Jijau English Medium School Logo"
                       className="w-8 h-8 rounded-lg object-cover"
                     />
