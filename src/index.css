@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+/* ===== Jijau English Medium School — Design System ===== */
+
+@theme {
+  /* Primary: Warm Marigold/Saffron */
+  --color-primary-50: #FFF8E7;
+  --color-primary-100: #FFEFC5;
+  --color-primary-200: #FFE09E;
+  --color-primary-300: #FFD077;
+  --color-primary-400: #F5A623;
+  --color-primary-500: #E8961A;
+  --color-primary-600: #CC7F0E;
+  --color-primary-700: #A66208;
+  --color-primary-800: #7D4A06;
+  --color-primary-900: #543204;
+
+  /* Secondary: Deep Teal/Navy */
+  --color-secondary-50: #E8F4F8;
+  --color-secondary-100: #C5E3EF;
+  --color-secondary-200: #8EC8DE;
+  --color-secondary-300: #5BACCD;
+  --color-secondary-400: #2D8BB2;
+  --color-secondary-500: #1B6A94;
+  --color-secondary-600: #1B4965;
+  --color-secondary-700: #163C54;
+  --color-secondary-800: #112F42;
+  --color-secondary-900: #0C2231;
+
+  /* Accent: Coral */
+  --color-accent-50: #FFF0ED;
+  --color-accent-100: #FFDDD6;
+  --color-accent-200: #FFB8AA;
+  --color-accent-300: #FF937E;
+  --color-accent-400: #E8614D;
+  --color-accent-500: #D4493A;
+  --color-accent-600: #B93528;
+  --color-accent-700: #952719;
+  --color-accent-800: #711D12;
+  --color-accent-900: #4D130C;
+
+  /* Neutral Warm */
+  --color-warm-50: #FFFBF5;
+  --color-warm-100: #FFF5E8;
+  --color-warm-200: #FFECD1;
+  --color-warm-300: #E8DDD0;
+  --color-warm-400: #C4B8AB;
+  --color-warm-500: #9E9387;
+  --color-warm-600: #7A7068;
+  --color-warm-700: #574E47;
+  --color-warm-800: #352E29;
+  --color-warm-900: #1A1714;
+
+  /* Fonts */
+  --font-heading: "Baloo 2", "Fredoka", cursive, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(27, 73, 101, 0.08);
+  --shadow-card-hover: 0 12px 40px rgba(27, 73, 101, 0.15);
+  --shadow-nav: 0 2px 20px rgba(27, 73, 101, 0.1);
+  --shadow-button: 0 4px 14px rgba(232, 97, 77, 0.3);
+
+  /* Border Radius */
+  --radius-card: 1.25rem;
+  --radius-button: 0.875rem;
+  --radius-pill: 100px;
+
+  /* Animation */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-warm-800);
+  background-color: var(--color-warm-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary-700);
+  line-height: 1.2;
+}
+
+/* ===== Custom Utilities ===== */
+
+/* Hand-drawn underline accent */
+.heading-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 C30 2, 60 10, 100 6 C140 2, 170 10, 198 4' fill='none' stroke='%23F5A623' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Blob shape backgrounds */
+.blob-shape {
+  border-radius: 42% 58% 62% 38% / 44% 52% 48% 56%;
+}
+
+/* Gradient overlays */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-500));
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, var(--color-secondary-600), var(--color-secondary-700));
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent-400), var(--color-accent-500));
+}
+
+.gradient-warm {
+  background: linear-gradient(180deg, var(--color-warm-50), var(--color-warm-100));
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Section spacing */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-warm-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-300);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-400);
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-secondary-800);
+}
