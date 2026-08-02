@@ -58,7 +58,7 @@ export default function Testimonials() {
 
       <div className="relative max-w-3xl mx-auto">
         {/* Carousel Container */}
-        <div className="relative overflow-hidden min-h-[280px] sm:min-h-[240px]">
+        <div className="relative overflow-hidden min-h-[360px] sm:min-h-[300px] md:min-h-[280px] flex items-center justify-center">
           <AnimatePresence custom={direction} mode="wait">
             <motion.div
               key={t.id}
@@ -76,9 +76,9 @@ export default function Testimonials() {
                 if (swipe < -3000) next();
                 else if (swipe > 3000) prev();
               }}
-              className="absolute inset-0"
+              className="w-full"
             >
-              <div className="bg-warm-50 rounded-3xl p-8 sm:p-10 text-center border border-warm-200">
+              <div className="bg-warm-50 rounded-3xl p-6 sm:p-8 md:p-10 text-center border border-warm-200 shadow-sm">
                 {/* Quote Icon */}
                 <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-6">
                   <Quote size={22} className="text-primary-500" />
